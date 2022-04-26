@@ -62,14 +62,20 @@ body{
 }
 #navbar > .navlinks{
     display:flex;
+    margin:0;
+    justify-content:flex-start;
+    /* border:2px solid yellow; */
+    padding:0;
     /* gap:2rem; */
 }
 #navbar >.navlinks > li{
     list-style-type: none;
-    margin:0 8px;
+    margin:0 0 0 8px;
+    /* border:2px solid yellow; */
 }
 #navbar >.navlinks > li > a{
     color:var(--white);
+    font-size:16px;
     text-decoration: none;
     font-weight:400;
 }
@@ -208,6 +214,7 @@ body{
     padding:25px;
     background-color: var(--dark-blue-4);
     width:32%;
+    margin:10px 0;
     border-radius:8px;
     box-shadow:3px 3px 8px -2px var(--dark-blue-4);
 }
