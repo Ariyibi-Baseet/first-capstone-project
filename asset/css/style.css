@@ -219,7 +219,7 @@ body{
     border-radius:8px;
     box-shadow:3px 3px 8px -2px var(--dark-blue-4);
 }
-.one{
+#testimonial .one{
     position: relative;
 }
 .testimonial-card > p{
@@ -285,24 +285,31 @@ body{
     background-color: var(--dark-blue-3);
     padding:200px 0 30px 0;
     display:flex;
+    align-items: flex-start;
+    width: 100%;
 }
-.one,.two,.three,.four,.five{
+#footer .one,.two,.three,.four,.five{
     padding:20px;
 }
-.one{
+#footer .one{
     width:45%;
 }
 .two,.three,.four{
-    width:15%;
+    width:20%;
+    /* border:2px solid var(--white) */
 }
 .five{
     width:10%;
+    /* border:2px solid var(--white); */
 }
-footer *{
+.five span{
+    margin:0 0 0 5px;
+}
+#footer *{
     color:var(--white)
 }
 
-footer ul li{
+#footer ul li{
     list-style-type: none;
     margin:10px 0;
 }
@@ -399,18 +406,94 @@ footer ul li{
         border-radius:25px;
     }
     /* footer */
-    footer{
+    #footer{
         flex-direction:column;
-        padding-top:50px;
+        padding-top:220px;
     }
 
-    footer ul{
+    #footer ul{
         margin:0;
         padding:0;
-        /* border:2px solid white; */
+        /* border:2px solid yellow; */
+        box-sizing: border-box;
     }
 
     .one,.two,.three,.four,.five{
+        width:90%;
+    }
+    .five{
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        /* border:2px solid var(--white); */
+    }
+    .five span{
+        margin:0 0 0 15px;
+        /* border:2px solid var(--white); */
+        padding:5px 10px;
+        border-radius:50%;
+        box-sizing: border-box;
+    }
+}
+
+/* For tablet */
+@media screen and (max-width:768px)
+{
+    /* Testimonial */
+    #testimonial{
+        flex-direction: column;
+        padding:60px;
+        padding-bottom:400px;
+       }
+    .testimonial-card{
         width:100%;
+    }
+    #testimonial .one::before{
+    content: url('../img/quotes.png');
+    position:absolute;
+    top:-43px;
+    left:0;
+}
+
+    /* News letter */
+    #news-letter{
+        width:90%;
+        bottom:-17%;
+    }
+    .input{
+        flex-direction:column;
+    }
+    .input > input[type=text], button.news-letter{
+        width:100%;
+        box-sizing: border-box;
+        padding:20px 20px;
+        border-radius:25px;
+    }
+        /* footer */
+    #footer{
+        flex-direction:column;
+        padding-top:220px;
+        font-size:20px;
+    }
+    
+    #footer ul{
+        margin:0;
+        padding:0;
+        /* border:2px solid yellow; */
+        box-sizing: border-box;
+    }
+    
+    #footer .one,.two,.three,.four,.five{
+        width:90%;
+    }
+    .five{
+        display: flex;
+        justify-content: center;
+    }
+    .five span{
+        margin:0 0 0 15px;
+        border:2px solid var(--white);
+        padding:5px 10px;
+        border-radius:50%;
     }
 }
