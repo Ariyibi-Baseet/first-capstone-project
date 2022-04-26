@@ -58,7 +58,7 @@ body{
 #navbar > .brand >img{
     width:100px;
     height:40px;
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
 }
 #navbar > .navlinks{
     display:flex;
