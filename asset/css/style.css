@@ -70,7 +70,7 @@ body{
 }
 #navbar >.navlinks > li{
     list-style-type: none;
-    margin:0 0 0 8px;
+    margin:0 0 0 20px;
     /* border:2px solid yellow; */
 }
 #navbar >.navlinks > li > a{
@@ -81,7 +81,7 @@ body{
 }
 /* Styling header section */
 #header{
-    width:105%;
+    width:100%;
     box-sizing:border-box;
     min-height:100vh;
     background-color: var(--dark-blue-1);
@@ -123,6 +123,7 @@ body{
 
 /* Styling about section */
 #about{
+    width:100%;
     /* min-height:100vh; */
     position:relative;
     background-color: var(--dark-blue-2);
@@ -218,6 +219,9 @@ body{
     border-radius:8px;
     box-shadow:3px 3px 8px -2px var(--dark-blue-4);
 }
+.one{
+    position: relative;
+}
 .testimonial-card > p{
     color:var(--white);
     font-size:16px;
@@ -279,11 +283,37 @@ body{
 /* Styling footer section */
 #footer{
     background-color: var(--dark-blue-3);
-    padding:100px 30px;
+    padding:200px 0 30px 0;
+    display:flex;
+}
+.one,.two,.three,.four,.five{
+    padding:20px;
+}
+.one{
+    width:45%;
+}
+.two,.three,.four{
+    width:15%;
+}
+.five{
+    width:10%;
+}
+footer *{
+    color:var(--white)
 }
 
+footer ul li{
+    list-style-type: none;
+    margin:10px 0;
+}
 /* Responsiveness */
 @media screen and (max-width:600px){
+    /* navbar */
+    #navbar >.navlinks > li{
+        list-style-type: none;
+        margin:0 0 0 8px;
+        /* border:2px solid yellow; */
+    }
     /* header */
     #header{
         /* padding-top:20%; */
@@ -348,6 +378,12 @@ body{
     .testimonial-card{
         width:100%;
     }
+    #testimonial .one::before{
+    content: url('../img/quotes.png');
+    position:absolute;
+    top:-43px;
+    left:0;
+}
     /* News letter */
     #news-letter{
         width:90%;
@@ -362,5 +398,19 @@ body{
         padding:20px 20px;
         border-radius:25px;
     }
-    /*  */
+    /* footer */
+    footer{
+        flex-direction:column;
+        padding-top:50px;
+    }
+
+    footer ul{
+        margin:0;
+        padding:0;
+        /* border:2px solid white; */
+    }
+
+    .one,.two,.three,.four,.five{
+        width:100%;
+    }
 }
